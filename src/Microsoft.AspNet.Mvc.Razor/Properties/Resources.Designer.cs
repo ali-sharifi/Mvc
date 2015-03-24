@@ -283,7 +283,7 @@ namespace Microsoft.AspNet.Mvc.Razor
         }
 
         /// <summary>
-        /// The following sections have been defined but have not been rendered: '{0}'.
+        /// The following sections have been defined but have not been rendered by the page at '{0}': '{1}'.
         /// </summary>
         internal static string SectionsNotRendered
         {
@@ -291,11 +291,11 @@ namespace Microsoft.AspNet.Mvc.Razor
         }
 
         /// <summary>
-        /// The following sections have been defined but have not been rendered: '{0}'.
+        /// The following sections have been defined but have not been rendered by the page at '{0}': '{1}'.
         /// </summary>
-        internal static string FormatSectionsNotRendered(object p0)
+        internal static string FormatSectionsNotRendered(object p0, object p1)
         {
-            return string.Format(CultureInfo.CurrentCulture, GetString("SectionsNotRendered"), p0);
+            return string.Format(CultureInfo.CurrentCulture, GetString("SectionsNotRendered"), p0, p1);
         }
 
         /// <summary>

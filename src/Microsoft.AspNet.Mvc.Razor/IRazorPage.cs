@@ -78,8 +78,9 @@ namespace Microsoft.AspNet.Mvc.Razor
         void EnsureBodyWasRendered();
 
         /// <summary>
-        /// Gets the sections that are rendered in the page.
+        /// Verifies that all sections defined in <see cref="PreviousSectionWriters"/> were rendered.
         /// </summary>
-        IEnumerable<string> RenderedSections { get; }
+        /// <exception cref="InvalidOperationException">if one or more sections were not rendered.</exception>
+        void EnsureSectionsWereRendered();
     }
 }
